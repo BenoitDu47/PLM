@@ -5,12 +5,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Description
- *
- * @author Benoit THOURY
+ * *Il s'agit d'une classe permettant la gestion du cycle de vie d’avions
+ * Airbus. Un avion est caractérisé par son identifiant unique, son programme
+ * (A320, A400M, A380, A300…), sa phase actuelle (étude de faisabilité,
+ * conception, définition, construction, en service, clôturé), son type (Fret,
+ * transport passager, militaire, avions d’affaires…
  * 
+ * @author ThouryB
+ *
  */
-
 public class AircraftManagement {
 
 	public static void main(String[] args) {
@@ -32,8 +35,6 @@ public class AircraftManagement {
 		System.out.println(choice);
 		int choice1 = Integer.parseInt(choice);
 
-
-		
 		switch (choice1) {
 		case 1:
 			for (int y = 0; y < tabAircraft.length; ++y) {
@@ -47,7 +48,7 @@ public class AircraftManagement {
 			System.out.println("Merci de renseigner un mot clé d'un avion. \nExemple: A300");
 
 			String Aircraft = scan.nextLine();
-			
+
 			System.out.println(Aircraft);
 			Aircraft = Aircraft.replaceAll("\\s", "").toUpperCase();
 			Aircraft = Aircraft + " ";

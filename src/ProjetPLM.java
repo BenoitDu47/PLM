@@ -5,8 +5,24 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * This is a class allowing the life cycle management of aircraft Airbus. An
+ * aircraft is characterized by its unique identifier, its program (A320, A400M,
+ * A380, A300…), its current phase (performance study, design, definition,
+ * construction, in service, closed), wire type (Freight, passenger transport,
+ * military, business aircraft…
+ * 
+ * @author ThouryB
+ * 
+ *@see type
+ *
+ */
 public class ProjetPLM {
 
+/**
+ * 
+ * @param 
+ */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
@@ -50,18 +66,13 @@ public class ProjetPLM {
 //					System.out.println("L'avion se trouve à l'index : " + i.get(0));
 //					
 //				}
-				
+
 				if (aircraftSearch(index) == true) {
 					System.out.println("L'avion se trouve à l'index : " + i.get(0));
 				}
-				
 
 			}
-				System.out.println("L'avion n'existe pas.");
-				
-			
-			
-			
+			System.out.println("L'avion n'existe pas.");
 
 			break;
 		case 3:
@@ -78,6 +89,11 @@ public class ProjetPLM {
 
 	}
 
+	/**
+	 * 
+	 * @param 
+	 * @return false or true
+	 */
 	private static boolean aircraftSearch(int index) {
 		boolean faut;
 		if (index == -1) {
