@@ -38,11 +38,13 @@ public class PLMHome {
 		String choice = scanner.nextLine();
 		System.out.println(choice);
 		int choice1 = Integer.parseInt(choice);
-
+		int count = 1;
+		
+		
 		switch (choice1) {
 		case 1:
 
-			int count = 1;
+			
 			for (HashMap<String, String> monAvion : mesAvions) {
 				System.out.println(count + "= [" + monAvion.get("id") + " - " + monAvion.get("program") + " - "
 						+ monAvion.get("phase") + "]");
@@ -55,16 +57,16 @@ public class PLMHome {
 			System.out.println("Merci de renseigner un mot clé d'un avion. \nExemple: A300");
 
 			String choiceAirplane = scanner.nextLine();
-
+			
 			for (HashMap<String, String> monAvion : mesAvions) {
 				
 				int index = monAvion.get("id").indexOf(choiceAirplane.toUpperCase());
 				
 				if( index == 1 ) {
-					System.out.println("= [" + monAvion.get("id") + " - " + monAvion.get("program") + " - "
+					System.out.println(count + "= [" + monAvion.get("id") + " - " + monAvion.get("program") + " - "
 							+ monAvion.get("phase") + "]");
 				}		
-				
+				count++;
 			}
 		
 
